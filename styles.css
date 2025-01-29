@@ -29,7 +29,7 @@ main {
   width: 30%;
   border-radius: 10px;
   backdrop-filter: blur(4px);
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
   padding: 2rem 1.8rem;
   text-align: center;
   box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.11);
@@ -130,6 +130,6 @@ a:hover {
 @media only screen and (max-width: 500px) {
   main {
     width: 95%;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.65rem;
   }
 }
