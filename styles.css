@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: url("./assets/back.jpg") center center no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 450px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  margin: 20px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+img {
+  /* border-radius: 5px; */
+  margin-bottom: 10px;
+  transition: ease-in-out 0.5s;
+}
+
+img:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
+#name {
+  font-family: "Roboto Slab";
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  transition: ease-in-out 0.3s;
+}
+#name:hover {
+  cursor: pointer;
+  scale: 1.02;
+}
+
+#job {
+  font-family: "Roboto Slab";
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  color: #5f9ea0;
+}
+
+#bio {
+  margin: 1.8rem 0;
+}
+
+#links {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.time {
+  font-weight: normal !important;
+  color: cadetblue;
+}
+
+ion-icon {
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s ease;
+}
+
+a:hover {
+  color: cadetblue;
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main {
+    width: 95%;
+  }
+  .details {
+    text-align: center;
+  }
+  section {
+    margin: 0.5rem;
+  }
+}

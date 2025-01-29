@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <img
+        src="./assets/silo.jpg"
+        alt="Slack Profile Picture"
+        data-testid="profilePicture"
+      />
+      <div class="details">
+        <p data-testid="fullName" id="name">Ayomikun Adeosun</p>
+        <p data-testid="jobTitle" id="job">Frontend Developer</p>
+        <p data-testid="shortBio" id="bio">Bio goes here...</p>
+        <p data-testid="currentLocation" id="location">Ilisan-Remo</p>
+        <p data-testid="emailAddress" id="email">ayoadeosun10@gmail.com</p>
+        <section data-testid="socialLinks" id="links">
+          <a href="https://www.github.com/ayomikun-ade" target="_blank"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
+          <a href="https://www.linkedin.com/in/ayomikun-adeosun" target="_blank"
+            ><ion-icon name="logo-linkedin"></ion-icon
+          ></a>
+          <a href="mailto:ayoadeosun10@gmail.com" target="_blank"
+            ><ion-icon name="mail-outline"></ion-icon
+          ></a>
+        </section>
+        <p class="time" data-testid="currentTimeUTC"></p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
