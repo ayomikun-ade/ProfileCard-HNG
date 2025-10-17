@@ -3,48 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Card</title>
+    <title>Profile Card - Ayomikun Adeosun</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <main>
-      <img
-        src="./assets/profile-image.jpg"
-        alt="Profile Picture"
-        data-testid="profilePicture"
-      />
-      <div class="details">
-        <p data-testid="fullName" id="name">Ayomikun Adeosun</p>
-        <p data-testid="jobTitle" id="job">Frontend Developer</p>
-        <p data-testid="shortBio" id="bio">
-          A Computer Science undergraduate and Front-end developer passionate
-          about building visually appealing and user-friendly web experiences.
-          Proficient in Tailwind CSS and React.js, with some experience in
-          backend development using Express.js. <br />A cybersecurity enthusiast
-          - Ethical Hacking to be specific - with experience using Kali Linux
-          and its tools. <br />Always eager to explore new technologies and
-          improve development skills. <br />
-          <span class="mini"
-            >Just a little shrimp trying to make it in this big world.</span
-          >
-        </p>
-        <p data-testid="currentLocation" id="location">Ilisan-Remo</p>
-        <p data-testid="emailAddress" id="email">ayoadeosun10@gmail.com</p>
-        <section data-testid="socialLinks" id="links">
-          <a href="https://www.github.com/ayomikun-ade" target="_blank"
-            ><ion-icon name="logo-github"></ion-icon
-          ></a>
-          <a href="https://www.linkedin.com/in/ayomikun-adeosun" target="_blank"
-            ><ion-icon name="logo-linkedin"></ion-icon
-          ></a>
-          <a href="mailto:ayoadeosun10@gmail.com" target="_blank"
-            ><ion-icon name="mail-outline"></ion-icon
-          ></a>
-        </section>
-        <p class="time" data-testid="currentTimeUTC"></p>
+    <article class="profile-card" data-testid="test-profile-card">
+      <div class="profile-header-group">
+        <figure class="profile-avatar">
+          <img
+            src="./assets/profile-image.jpg"
+            alt="Ayomikun Adeosun's Profile Picture"
+            data-testid="test-user-avatar"
+          />
+
+          <figcaption class="time" data-testid="test-user-time"></figcaption>
+        </figure>
+
+        <div class="details">
+          <header>
+            <h2 data-testid="test-user-name">Ayomikun Adeosun</h2>
+            <p id="job">Frontend Developer</p>
+          </header>
+
+          <p class="bio" data-testid="test-user-bio">
+            A Front-end developer passionate about building visually appealing
+            and user-friendly web experiences. Proficient in Tailwind CSS and
+            React.js, with some experience in backend development using
+            Express.js. <br />Always eager to explore new technologies and
+            improve development skills. <br />
+            <span class="mini"
+              >Just a little shrimp trying to make it in this big world.</span
+            >
+          </p>
+        </div>
       </div>
-    </main>
+
+      <hr />
+
+      <nav class="social-links-nav">
+        <ul data-testid="test-user-social-links">
+          <li>
+            <a
+              href="https://www.github.com/ayomikun-ade"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-github"
+            >
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ayomikun-adeosun"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-linkedin"
+            >
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:ayoadeosun10@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-email"
+            >
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <hr />
+
+      <div class="lists-container">
+        <section class="profile-section">
+          <h3>Hobbies</h3>
+          <ul data-testid="test-user-hobbies">
+            <li>Music</li>
+            <li>Reading</li>
+          </ul>
+        </section>
+
+        <section class="profile-section">
+          <h3>Dislikes</h3>
+          <ul data-testid="test-user-dislikes">
+            <li>Anything that stresses me</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
     <script src="script.js"></script>
     <script
       type="module"

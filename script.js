@@ -1,11 +1,12 @@
-function updateTime() {
-  const now = new Date();
-  const utcTime = now.toUTCString().split(" ")[4]; // Get time in HH:MM:SS
+document.addEventListener("DOMContentLoaded", () => {
+  const timeElement = document.querySelector('[data-testid="test-user-time"]');
 
-  document.querySelector(
-    '[data-testid="currentTimeUTC"]'
-  ).textContent = `${utcTime}`;
-}
+  if (timeElement) {
+    const updateTime = () => {
+      timeElement.textContent = Date.now();
+    };
 
-updateTime();
-setInterval(updateTime, 60000);
+    updateTime();
+    setInterval(updateTime, 1000);
+  }
+});
