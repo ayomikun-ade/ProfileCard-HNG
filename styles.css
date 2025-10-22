@@ -32,14 +32,21 @@ body {
   margin: 0.5rem 0;
   padding: 2rem 1.8rem;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.11);
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.active {
+  color: #5f9ea0 !important;
+  border-bottom: 1px solid #5f9ea0;
 }
 
 hr {
   border: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 20px 0;
-  width: 100%;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.2); */
+  margin: 8px 0;
+  /* width: 100%; */
 }
 
 .profile-header-group {
@@ -84,6 +91,10 @@ hr {
 .details header h2:hover {
   cursor: pointer;
   scale: 1.02;
+}
+
+section h2 {
+  font-family: "Roboto Slab";
 }
 
 #job {
@@ -160,15 +171,25 @@ a:focus-visible {
 .profile-section h3 {
   color: #5f9ea0;
   margin-bottom: 5px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
   padding-bottom: 5px;
   text-align: center;
 }
 
 .profile-section ul {
-  list-style: disc inside;
+  list-style: none;
   margin-left: 15px;
   font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.profile-section ul li {
+  background-color: #5f9ea0;
+  padding: 4px 12px;
+  border-radius: 15px;
+  display: inline-block;
 }
 
 /* Tablet/Desktop (Wider screens) */
@@ -203,5 +224,174 @@ a:focus-visible {
 
   .profile-section {
     flex: 1;
+  }
+}
+
+/* ---------- Global Navigation ---------- */
+.top-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  animation: navFadeIn 0.7s ease-in-out forwards;
+}
+
+.top-nav a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover,
+.top-nav a:focus {
+  color: cadetblue;
+  outline: none;
+}
+
+/* ---------- Contact Page ---------- */
+.contact-page {
+  max-width: 600px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  margin: 0 auto;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.contact-page h1 {
+  font-family: "Roboto Slab";
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: cadetblue;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  font-family: "Poppins", sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 5px cadetblue;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Roboto Slab", serif;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: cadetblue;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  background: #6db6b6;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+}
+
+.success {
+  color: #5efc82;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+/* ---------- About Page ---------- */
+.about-page {
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, 0.11);
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.about-page h1 {
+  font-family: "Roboto Slab";
+  text-align: center;
+  color: cadetblue;
+  margin-bottom: 1.5rem;
+}
+
+.about-page section {
+  margin-bottom: 1.5rem;
+}
+
+.about-page h2 {
+  color: #5f9ea0;
+  margin-bottom: 0.5rem;
+}
+
+.about-page ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
+
+@media (max-width: 600px) {
+  .contact-page,
+  .about-page {
+    padding: 1.5rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
